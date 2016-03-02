@@ -1,0 +1,60 @@
+FORMAT: 1A
+HOST: https://api.acs-srv.com/
+
+# Run Alpha APIs
+
+APIs used by run.alpha.org.
+
+# Group Settings
+
+## Settings [/public/{locale}/settings]
+
++ Parameters
+    + locale: en_GB - locale for which settings are requested
+    
++ Attributes
+    + header (object)
+        + links (array)
+            + (object)
+                + title: `Try` - link item title
+                + url: `http://alpha.org/try` - link item URL
+        + global: `http://www.alpha.org/global`
+        + twitter: `http://twitter.com/alphacourse` - Twitter account
+        + facebook: `http://www.facebook.com/Alpha` - Facebook page
+        + instagram: `http://instagram.com/alphacourse` - Instagram account
+        + youtube: `http://www.youtube.com/user/thealphacourse` - Youtube channel
+        + search: null
+        + inlineSearch: true
+        + hasSocialItems: true
+    + footer (object)
+        + links (array)
+            + (array)
+                + (object)
+                    + title: `Shop` - link item title
+                    + url: `http://shop.alpha.org/` - link item URL
+    + howto: `https://www.youtube.com/watch?v=XlRIPTq-RqU` - how-to-use URL
+    + support: `http://alphaint.uservoice.com/` - support link
+    + giving: `http://www.alpha.org/give` - donation page URL
+    + carouselOne (object)
+        + boxes (array)
+            + (Carousel Item)
+    + carouselTwo (object)
+        + boxes (array)
+            + (Carousel Item)
+    + explore_page: true
+
+### Get settings [GET]
+
++ Response 200
+    + Attributes (object)
+        + settings (Settings)
+
+# Data Structures
+## Carousel Item (object)
+    + type: video - type of item
+    + title: `Alpha Youth Film Series | Training 2`
+    + description: `This video focuses on how to lead a great small group and takes you through how to facilitate great conversations and deal with difficult questions. Perfect for anyone hosting an Alpha small group, particularly for the first time.`
+    + image: `http://files.alpha.org.s3.amazonaws.com/images/af79734c-d73c-40d2-9b8c-727868017772.jpg`
+    + video: `https://www.youtube.com/watch?v=TzJd9wFcU9c`
+    + download: null,
+    + lightbox: `A training video on how to lead a great small group.`
